@@ -1,0 +1,181 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    background:linear-gradient(
+        135deg,
+        #ffd6e8,
+        #ffe6f0,
+        #fff0f7
+    );
+    overflow-x:hidden;
+    color:#5c3b4b;
+}
+
+/* Welcome Screen */
+
+#welcome-screen{
+    position:fixed;
+    inset:0;
+    z-index:1000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.welcome-content{
+    text-align:center;
+    z-index:10;
+    padding:20px;
+}
+
+.welcome-content h1{
+    font-size:3rem;
+    margin:15px 0;
+}
+
+.welcome-content p{
+    margin-bottom:20px;
+}
+
+#enterBtn{
+    border:none;
+    padding:15px 30px;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:1rem;
+}
+
+.door{
+    position:absolute;
+    top:0;
+    width:50%;
+    height:100%;
+    background:#ffc6df;
+    transition:2s ease;
+}
+
+.left-door{
+    left:0;
+}
+
+.right-door{
+    right:0;
+}
+
+.open .left-door{
+    transform:translateX(-100%);
+}
+
+.open .right-door{
+    transform:translateX(100%);
+}
+
+/* Hero */
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+/* Gallery */
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:50px;
+    padding:40px 20px;
+}
+
+.art-card{
+    width:280px;
+    background:white;
+    padding:12px;
+    border-radius:8px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    position:relative;
+    transition:.4s;
+}
+
+.art-card:hover{
+    transform:translateY(-10px);
+}
+
+.art-card::before{
+    content:"";
+    width:2px;
+    height:40px;
+    background:#888;
+    position:absolute;
+    top:-40px;
+    left:50%;
+}
+
+.clip{
+    position:absolute;
+    top:-12px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:20px;
+}
+
+.art-card img{
+    width:100%;
+    display:block;
+    border-radius:5px;
+}
+
+/* About */
+
+.about{
+    max-width:900px;
+    margin:80px auto;
+    padding:40px;
+    background:rgba(255,255,255,.5);
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+}
+
+.about h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.about p{
+    line-height:1.8;
+    text-align:center;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:50px 20px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .welcome-content h1{
+        font-size:2rem;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .art-card{
+        width:90%;
+    }
+}
