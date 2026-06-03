@@ -1,3 +1,17 @@
+const enterBtn = document.getElementById("enterBtn");
+const welcomeScreen = document.getElementById("welcome-screen");
+
+if (enterBtn) {
+    enterBtn.addEventListener("click", () => {
+
+        welcomeScreen.classList.add("open");
+
+        setTimeout(() => {
+            welcomeScreen.style.display = "none";
+        }, 2000);
+
+    });
+}
 const gallery = document.getElementById("gallery");
 
 /* Create artworks */
