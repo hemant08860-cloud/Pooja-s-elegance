@@ -179,3 +179,95 @@ footer{
         width:90%;
     }
 }
+/* Fonts */
+
+.hero h1,
+.welcome-content h1{
+    font-family:'Great Vibes', cursive;
+    font-size:4rem;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+}
+
+/* Sparkles */
+
+.sparkles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.sparkles span{
+    position:absolute;
+    color:white;
+    opacity:.8;
+    animation:floatSparkle linear infinite;
+}
+
+@keyframes floatSparkle{
+
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+
+/* Better Frames */
+
+.art-card{
+
+    background:white;
+    border-radius:15px;
+    padding:12px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.15);
+
+    transition:
+    transform .4s,
+    box-shadow .4s;
+}
+
+.art-card:hover{
+
+    transform:
+    translateY(-12px)
+    rotate(2deg);
+
+    box-shadow:
+    0 25px 50px rgba(0,0,0,.25);
+}
+
+/* Fade Animation */
+
+.fade-up{
+
+    opacity:0;
+
+    transform:
+    translateY(40px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+.fade-up.show{
+
+    opacity:1;
+    transform:translateY(0);
+}
