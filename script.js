@@ -16,7 +16,7 @@ const gallery = document.getElementById("gallery");
 
 /* Create artworks */
 
-for(let i = 1; i <= 16; i++){
+for(let i = 1; i <= 17; i++){
 
     gallery.innerHTML += `
         <div class="art-card fade-up">
